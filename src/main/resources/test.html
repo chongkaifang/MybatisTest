@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="checkbox" name="checkbox" value="1" checked="checked">
+<input type="checkbox" name="checkbox" value="2">
+<input type="checkbox" name="checkbox" value="3">
+<input type="checkbox" name="checkbox" value="4">
+<input type="checkbox" name="checkbox" value="5">
+<table>
+    <tr>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td>2</td>
+    </tr>
+    <tr>
+        <td>3</td>
+    </tr>
+</table>
+</body>
+</html>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    $('input[type="checkbox"]').click(function () {
+        if ($(this).is(':checked')) {
+            $('input[type="checkbox"]').prop('checked', true);
+        } else {
+            $('input[type="checkbox"]').prop('checked', false);
+        }
+        var arr = [];
+        $('input[type="checkbox"]:checked').each(function () {
+            arr.push($(this).val());
+        });
+        console.log(arr);
+        $('input[type="checkbox"]').parent().css('white-space', 'nowrap');
+    });
+
+    $('tr:even').css('background-color', '#ccc');
+    $('tr:odd').css('background-color', '#eee');
+
+</script>
