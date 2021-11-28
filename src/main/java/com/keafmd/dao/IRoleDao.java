@@ -24,7 +24,7 @@ public interface IRoleDao {
 
     /**
      * @author chongkaifang
-     * @desc
+     * @desc 查询所有角色
      * @date 2021/11/28 19:49
      * @return List<Role>
      */
